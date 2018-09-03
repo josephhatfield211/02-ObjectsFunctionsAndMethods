@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joey Hatfield.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# done: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -19,6 +19,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 ###############################################################################
 
 import rosegraphics as rg
+import math
 
 
 def main():
@@ -26,11 +27,13 @@ def main():
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
+    c(4, 3)
+    turtle("red", 1)
 
 
 ###############################################################################
 #
-# TODO: 3a.  Define a function immediately blow this _TODO_.
+# done: 3a.  Define a function immediately blow this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -43,10 +46,15 @@ def main():
 #
 ###############################################################################
 
+def c(a, b):
+    cd = math.sqrt((a ** 2 + b ** 2))
+    print(cd)
+
+
 
 ###############################################################################
 #
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# done: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -62,15 +70,23 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function and print the returned value,
+# done: 4b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
-
+def turtle(color, thicc):
+    window = rg.TurtleWindow()
+    turtle1 = rg.SimpleTurtle("turtle")
+    turtle2 = rg.SimpleTurtle("turtle")
+    turtle1.pen = rg.Pen("green", thicc)
+    turtle2.pen = rg.Pen(color, "5")
+    turtle1.forward(100)
+    turtle2.backward(100)
+    window.close_on_mouse_click()
 
 ###############################################################################
 #
-# TODO: 5.
+# done: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
