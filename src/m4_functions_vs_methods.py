@@ -80,7 +80,6 @@ def main():
 
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
-
     turtle3("red", 1)
     try_methods()
     try_functions()
