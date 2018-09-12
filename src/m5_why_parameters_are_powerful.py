@@ -155,7 +155,7 @@ def better_draw_circles(point, number):
 
 ###############################################################################
 #
-# TODO: 4a.
+# done: 4a.
 #   In the previous _TODO_, you made a MORE POWERFUL version
 #   of   draw_circles   by introducing a PARAMETER for the amount
 #   by which the radii of the concentric circles increase.
